@@ -1,0 +1,26 @@
+[tool.uv]
+package = false
+[project]
+name = "fourier-phase-swapping"
+version = "0.1.0"
+description = "Data augmentation using Fourier Phase Swapping on CIFAR-100"
+readme = "README.md"
+authors = [{ name = "Issam Mhedhebi", email = "mhedhebiissam@gmail.com" }]
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.5",
+    "opencv-python>=5.1.0.95",
+    "pillow>=13.0.0",
+    "scikit-learn>=1.9.1",
+    "torch>=2.15.0",
+    "torchvision>=0.29.2",
+    "tqdm>=4.70.1",
+]
+
+[project.scripts]
+fourier-phase-swapping = "fourier_phase_swapping:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
